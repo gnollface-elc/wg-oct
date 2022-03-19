@@ -1,0 +1,19 @@
+dirs:
+  base_dir: "/tmp/" #base dir of WireGuard (mainly /etc/wireguard).
+  util_dir: "util/" #main directory of program, where all keys, client configs, and db located.
+  db_dir: "db/" # db file full path is $base_dir+$util_dir+$db_dir+$db_name
+  keys_dir: "keys/" # keys stored in $base_dir+$util_dir+$keys_dir
+  configs_dir: "configs/" # client configs and QR-codes stored in $base_dir+$util_dir+$conf_dir
+config:
+  telegram:
+    token: "271729517:AAEASLrOXj1RH9Y4XVkpk4Of6y9O_XaiPhE" #token of Telegram bot.
+    chat_id: [226289074] #list of users will be notified
+    tg_url: "https://api.telegram.org/bot{token}/sendMessage"
+  network:
+    srv_ip: '10.0.100.123' # ip addr of WireGuard server
+    net: '10.1.1.0' # internal WG network
+    netmask: 24
+    listen_port: 35053
+    FCI: 100 # first client IP
+  db_name: "octopus.db" # db file full path is $base_dir+$util_dir+$db_dir+$db_name
+  wg_conf: "wg0.conf" # wg config file path is $base_dir+$wg_conf
