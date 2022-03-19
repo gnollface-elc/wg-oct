@@ -1,4 +1,4 @@
-Functions:
+Functions: 
 1) first init #DONE
   1.1 directories (basedir, configs_dir, db_dir) #DONE
   1.2 db init #DONE
